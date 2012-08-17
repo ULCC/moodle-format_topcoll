@@ -109,7 +109,9 @@ if ($userisediting) {
 $completioninfo = new completion_info($course);
 echo $completioninfo->display_help_icon(); // MDL-25927
 
-echo $OUTPUT->heading(get_string('topicoutline'), 2, 'headingblock header outline');
+//TODO (JB) Hard codes the course title instead of format name - could be configurable
+//echo $OUTPUT->heading(get_string('topicoutline'), 2, 'headingblock header outline');
+echo $OUTPUT->heading($PAGE->course->fullname, 2, 'headingblock header outline');
 
 // Establish the table for the topics with the colgroup and col tags to allow css to set the widths of the columns correctly and fix them in the browser so
 // that the columns do not magically resize when the toggle is used or we go into editing mode.
