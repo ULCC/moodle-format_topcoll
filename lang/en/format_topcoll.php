@@ -441,3 +441,6 @@ $string['versionstable'] = 'Stable version - Could contain bugs.  Check on a tes
 // Privacy.
 $string['privacy:metadata:preference:toggle'] = 'The state of the toggles on a course.';
 $string['privacy:request:preference:toggle'] = 'The course id "{$a->name}" has the value "{$a->value}" which represents "{$a->decoded}" for the state of the toggles.';
+
+$string['hiddensections'] = 'Hidden sections';
+$string['hiddensections_help'] = 'Hidden sections can be displayed to students as \'not available\' on the course page, or kept completely hidden.';
