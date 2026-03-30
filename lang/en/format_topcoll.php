@@ -444,3 +444,4 @@ $string['privacy:request:preference:toggle'] = 'The course id "{$a->name}" has t
 
 $string['hiddensections'] = 'Hidden sections';
 $string['hiddensections_help'] = 'Hidden sections can be displayed to students as \'not available\' on the course page, or kept completely hidden.';
+$string['maxsectionaddmessage'] = 'You have reached the maximum number of sections allowed for a course.';

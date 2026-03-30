@@ -580,7 +580,9 @@ class renderer extends section_renderer {
         if ($section->uservisible) {
             $sectioncontext['cscml'] = $this->course_section_cmlist($section);
             if ($this->courseformat->show_editor()) {
-                $sectioncontext['cscml'] .= $this->course_section_add_cm_control($course, $section->section, $sectionreturn);
+                // $sectioncontext['cscml'] .= $this->course_section_add_cm_control($course, $section->section, $sectionreturn);
+                $format = course_format::instance($course);
+                $sectioncontext['cscml'] .= $this->section_add_cm_controls($format, $section);
             }
         }
 
@@ -712,7 +714,9 @@ class renderer extends section_renderer {
 
         if ($this->courseformat->show_editor()) {
             $stealthsectioncontext['cmcontrols'] =
-                $this->course_section_add_cm_control($course, $section->section, $section->section);
+                // $this->course_section_add_cm_control($course, $section->section, $section->section);
+            $format = course_format::instance($course);
+            $stealthsectioncontext['cmcontrols'] .= $this->section_add_cm_controls($format, $section->section);
         }
 
         return $this->render_from_template('format_topcoll/stealthsection', $stealthsectioncontext);
